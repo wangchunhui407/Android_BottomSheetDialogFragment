@@ -231,7 +231,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         recyclerView.setHasFixedSize(true);
 //        recyclerView.setAdapter(new ShareRecyclerViewAdapter(MainActivity.this, dialog));
         dialog.show();
-
     }
 
     @Override
