@@ -1,12 +1,7 @@
 package com.lzw.bottomsheetdialogdemo;
 
 import android.os.Bundle;
-import android.support.design.widget.BottomSheetBehavior;
-import android.support.design.widget.BottomSheetDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
 import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -15,6 +10,14 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +40,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button showBottomSheetDialogBtn2 = (Button)findViewById(R.id.btn_show_BottomSheetDialog2);
         Button showBottomSheetDialogBtn3 = (Button)findViewById(R.id.btn_show_BottomSheetDialog3);
         Button showBottomSheetDialogFragmentBtn = (Button)findViewById(R.id.btn_show_BottomSheetDialogFragment);
+
+        Button button = (Button)findViewById(R.id.btn_show_bottom_with_recycler);
+        button.setOnClickListener(this);
 
         View bottomSheet = findViewById(R.id.layout_bottomSheetBehavior);
         TextView tv1 = (TextView) bottomSheet.findViewById(R.id.tv);
@@ -136,6 +142,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 dialog.show(getSupportFragmentManager(), "dialog1");
 
                 break;
+            case R.id.btn_show_bottom_with_recycler:
+                getWindow().setWindowAnimations(R.style.DialogAnimation);
+                getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+                BottomRecyclerFragment dialog1 = new BottomRecyclerFragment();
+                dialog1.show(getSupportFragmentManager(), "dialog2");
+                break;
             default:
                 break;
         }
@@ -217,7 +229,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         recyclerView = (RecyclerView) dialog.findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new GridLayoutManager(MainActivity.this, 3));
         recyclerView.setHasFixedSize(true);
-        recyclerView.setAdapter(new ShareRecyclerViewAdapter(MainActivity.this,dialog));
+//        recyclerView.setAdapter(new ShareRecyclerViewAdapter(MainActivity.this, dialog));
         dialog.show();
 
     }

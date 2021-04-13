@@ -1,5 +1,6 @@
 package com.lzw.bottomsheetdialogdemo;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
@@ -7,13 +8,15 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
-import android.support.design.widget.BottomSheetDialog;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,6 +87,7 @@ public class ShareRecyclerViewAdapter extends RecyclerView.Adapter<ShareRecycler
     }
 
 
+    @SuppressLint("WrongConstant")
     public List<ResolveInfo> getShareApps(Context context) {
         List<ResolveInfo> mApps = new ArrayList<ResolveInfo>();
         Intent intent = new Intent(Intent.ACTION_SEND, null);

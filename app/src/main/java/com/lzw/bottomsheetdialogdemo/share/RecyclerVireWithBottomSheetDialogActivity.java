@@ -7,11 +7,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.BottomSheetDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +15,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.lzw.bottomsheetdialogdemo.R;
 
 import java.util.ArrayList;
@@ -84,8 +85,8 @@ public class RecyclerVireWithBottomSheetDialogActivity extends AppCompatActivity
         intent.setType("text/plain");
 //      intent.setType("*/*");
         PackageManager pManager = context.getPackageManager();
-        mApps = pManager.queryIntentActivities(intent,
-                PackageManager.COMPONENT_ENABLED_STATE_DEFAULT);
+//        mApps = pManager.queryIntentActivities(intent,
+//                PackageManager.COMPONENT_ENABLED_STATE_DEFAULT);
         return mApps;
     }
 

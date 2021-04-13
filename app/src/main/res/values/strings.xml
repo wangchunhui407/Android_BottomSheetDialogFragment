@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BottomSheetDialogDemo</string>
+    <string name="release_load_more">释放加载更多</string>
+    <string name="pull_load_more">上拉加载更多</string>
+    <string name="loading">努力加载ing……</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_refresh">释放刷新</string>
+    <string name="refreshing">正在刷新……</string>
+    <string name="refresh_complete">刷新完成</string>
 </resources>

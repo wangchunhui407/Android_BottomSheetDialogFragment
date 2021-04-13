@@ -67,6 +67,17 @@
             android:textSize="@dimen/sp20"
             android:text="展示BottomSheetDialogFragment"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_show_bottom_with_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#3333B5E5"
+            android:textSize="@dimen/sp20"
+            android:text="展示Bottom中带有recyclerview"
+            android:textAllCaps="false" />
     </LinearLayout>
 
     <include layout="@layout/bottom_sheet_dialog"/>
