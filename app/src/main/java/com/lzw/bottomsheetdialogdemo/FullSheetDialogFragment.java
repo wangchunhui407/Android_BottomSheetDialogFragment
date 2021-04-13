@@ -35,9 +35,6 @@ public class FullSheetDialogFragment extends BottomSheetDialogFragment {
 
     @Override
     public int getTheme() {
-//        int theme = super.getTheme();
-//        System.out.println("theme is "+theme);
-//        return super.getTheme();
         return R.style.dialog;
     }
 

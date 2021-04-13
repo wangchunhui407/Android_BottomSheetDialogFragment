@@ -52,7 +52,7 @@ public class TwitterRefreshHeaderView extends SwipeRefreshHeaderLayout {
     public void onRefresh() {
         ivArrow.setVisibility(GONE);
         ivRefresh.setVisibility(VISIBLE);
-        animationDrawable.start();
+//        animationDrawable.start();
         tvRefresh.setText(R.string.refreshing);
     }
 
@@ -65,7 +65,7 @@ public class TwitterRefreshHeaderView extends SwipeRefreshHeaderLayout {
     public void onMove(int y, boolean isComplete, boolean automatic) {
         if (!isComplete) {
             ivArrow.setVisibility(VISIBLE);
-            animationDrawable.stop();
+//            animationDrawable.stop();
             ivRefresh.setVisibility(GONE);
             if (y > mHeaderHeight) {
                 tvRefresh.setText(R.string.release_refresh);
@@ -90,7 +90,7 @@ public class TwitterRefreshHeaderView extends SwipeRefreshHeaderLayout {
     @Override
     public void onComplete() {
         rotated = false;
-        animationDrawable.stop();
+//        animationDrawable.stop();
         ivArrow.setVisibility(VISIBLE);
         ivRefresh.setVisibility(GONE);
         tvRefresh.setText(R.string.refresh_complete);
@@ -99,7 +99,7 @@ public class TwitterRefreshHeaderView extends SwipeRefreshHeaderLayout {
     @Override
     public void onReset() {
         rotated = false;
-        animationDrawable.stop();
+//        animationDrawable.stop();
         ivArrow.setVisibility(GONE);
         ivRefresh.setVisibility(GONE);
     }

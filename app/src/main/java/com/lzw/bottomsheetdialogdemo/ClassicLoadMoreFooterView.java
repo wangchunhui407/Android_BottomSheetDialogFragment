@@ -50,7 +50,7 @@ public class ClassicLoadMoreFooterView extends SwipeLoadMoreFooterLayout {
     @Override
     public void onMove(int y, boolean isComplete, boolean automatic) {
         if (!isComplete) {
-            animationDrawable.stop();
+//            animationDrawable.stop();
             ivArrow.setVisibility(VISIBLE);
             ivRefresh.setVisibility(GONE);
             if (-y >= mFooterHeight) {
@@ -65,7 +65,7 @@ public class ClassicLoadMoreFooterView extends SwipeLoadMoreFooterLayout {
     public void onLoadMore() {
         tvLoadMore.setText(R.string.loading);
         ivRefresh.setVisibility(VISIBLE);
-        animationDrawable.start();
+//        animationDrawable.start();
     }
 
     @Override
@@ -76,13 +76,13 @@ public class ClassicLoadMoreFooterView extends SwipeLoadMoreFooterLayout {
     @Override
     public void onComplete() {
         ivRefresh.setVisibility(GONE);
-        animationDrawable.stop();
+//        animationDrawable.stop();
         ivArrow.setVisibility(VISIBLE);
     }
 
     @Override
     public void onReset() {
-        animationDrawable.stop();
+//        animationDrawable.stop();
         ivRefresh.setVisibility(GONE);
     }
 }

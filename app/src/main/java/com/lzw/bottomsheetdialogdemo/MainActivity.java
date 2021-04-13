@@ -143,8 +143,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case R.id.btn_show_bottom_with_recycler:
-                getWindow().setWindowAnimations(R.style.DialogAnimation);
-                getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+//                getWindow().setWindowAnimations(R.style.DialogAnimation);
+//                getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
                 BottomRecyclerFragment dialog1 = new BottomRecyclerFragment();
                 dialog1.show(getSupportFragmentManager(), "dialog2");
                 break;
